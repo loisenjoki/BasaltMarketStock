@@ -49,7 +49,7 @@ API_KEY=YOUR_API_KEY
 ```
 ## Screenshots
 ![Screenshot1](assets/images/Screenshot2.png)
-![Screenshot2](assets/images/Screenshot1)
+![Screenshot2](assets/images/Screenshot1.png)
 
 
 
