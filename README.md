@@ -5,10 +5,6 @@
 Basalt Stock Market App is a Flutter application that does shows stock detail for 10 random companies;using [MarketStock APIs](https://marketstack.com/).
 The app also uses a date range and an auto complete search box to filter the data from the API.
 
-## Screenshots
-
-(Optional: Include screenshots or GIFs showcasing your app)
-
 ## Features
 
 - Feature 1: List of Listed company in Stock Market and their details.
@@ -51,4 +47,9 @@ API_KEY=YOUR_API_KEY
 2. flutter build apk --release   // For Android
 3. flutter build ios --release   // For iOS
 ```
+## Screenshots
+![Screenshot1](Screenshot_20230728_235043.png)
+![Screenshot2](Screenshot_20230728_235106.png)
+
+
 
