@@ -48,8 +48,8 @@ API_KEY=YOUR_API_KEY
 3. flutter build ios --release   // For iOS
 ```
 ## Screenshots
-![Screenshot1](Screenshot_20230728_235043.png)
-![Screenshot2](Screenshot_20230728_235106.png)
+![Screenshot1](assets/images/Screenshot2.png)
+![Screenshot2](assets/images/Screenshot1)
 
 
 
