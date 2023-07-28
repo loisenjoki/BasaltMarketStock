@@ -43,9 +43,9 @@ Create .env file in the root to the project and add your MarketStock APIKEY like
 API_KEY=YOUR_API_KEY
 ```
 
-##App Release
--Open a terminal or command prompt and navigate to your Flutter project's root directory.
--Run the following commands to build the app for release:
+##  App Release
+- Open a terminal or command prompt and navigate to your Flutter project's root directory.
+- Run the following commands to build the app for release:
 ```bash
 1. flutter clean
 2. flutter build apk --release   // For Android
