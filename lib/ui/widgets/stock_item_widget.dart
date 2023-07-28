@@ -13,6 +13,8 @@ class StockItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 13,
+        shadowColor: Colors.grey,
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -35,7 +37,7 @@ class StockItemWidget extends StatelessWidget {
                       Text(
                         data.symbol,
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
 
                       ),
                     ],
@@ -46,20 +48,27 @@ class StockItemWidget extends StatelessWidget {
                       Text(
                         "Exchange",
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
                       ),
                       const SizedBox(height: 4,),
                       Text(
                         data.exchange ?? '',
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
                       ),
                     ],
                   )
                 ],
               ),
-
               const SizedBox(height: 10.0,),
+              const SizedBox(
+                height: 1,
+                width: double.maxFinite,
+                child: Divider(
+                  color: baseGrey3,
+                  thickness: 0.5,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -71,14 +80,14 @@ class StockItemWidget extends StatelessWidget {
                         Text(
                           '${"High"} ${data.high}',
                           textAlign: TextAlign.start,
-                          style: TextStyles.smalltext,
+                          style: TextStyles.smallText,
 
                         ),
                         const SizedBox(height: 4,),
                         Text(
                           '${'Low'} ${data.low}',
                           textAlign: TextAlign.start,
-                          style: TextStyles.smalltext,
+                          style: TextStyles.smallText,
                         ),
                       ],
                     ),
@@ -90,13 +99,13 @@ class StockItemWidget extends StatelessWidget {
                             Text(
                                 '${"Open"} ${data.open}',
                                 textAlign: TextAlign.start,
-                                style: TextStyles.smalltext
+                                style: TextStyles.smallText
                             ),
                             const SizedBox(height: 4,),
                             Text(
                               '${"Close"} ${data.close}',
                               textAlign: TextAlign.start,
-                              style: TextStyles.smalltext,
+                              style: TextStyles.smallText,
 
                             ),
                           ],
@@ -127,7 +136,14 @@ class StockItemWidget extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10.0,),
-
+              const SizedBox(
+                height: 1,
+                width: double.maxFinite,
+                child: Divider(
+                  color: baseGrey3,
+                  thickness: 0.5,
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -137,13 +153,13 @@ class StockItemWidget extends StatelessWidget {
                       Text(
                         '${"Split"} ${data.splitFactor}',
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
                       ),
                       const SizedBox(height: 4,),
                       Text(
                         '${'Dividend '} ${data.dividend}',
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
 
                       ),
                     ],
@@ -154,14 +170,14 @@ class StockItemWidget extends StatelessWidget {
                       Text(
                         '${'Dividend '} ${data.dividend}',
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
 
                       ),
                       const SizedBox(height: 4,),
                       Text(
                         '${"Close"} ${data.close}',
                         textAlign: TextAlign.start,
-                        style: TextStyles.smalltext,
+                        style: TextStyles.smallText,
 
                       ),
                     ],
@@ -170,20 +186,28 @@ class StockItemWidget extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10.0,),
+              const SizedBox(
+                height: 1,
+                width: double.maxFinite,
+                child: Divider(
+                  color: baseGrey3,
+                  thickness: 0.5,
+                ),
+              ),
               Column(
                 children: [
                   Text(
                     '${"Adjacent Volume:"} ${data.adjVolume.toStringAsFixed(
                         2)}',
                     textAlign: TextAlign.start,
-                    style: TextStyles.smalltext,
+                    style: TextStyles.smallText,
 
                   ),
                   const SizedBox(height: 4,),
                   Text(
                     convertDate(data.date),
                     textAlign: TextAlign.start,
-                    style: TextStyles.smalltext,
+                    style: TextStyles.smallText,
 
                   ),
                 ],

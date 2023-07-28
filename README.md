@@ -15,8 +15,12 @@ The app also uses a date range and an auto complete search box to filter the dat
 - Feature 2: Search Filter on the menu bar .
 - Feature 2: Calender picker for date range selection.
 
-- ...
 
+## You need the following to run the app
+- [Android Studio](https://developer.android.com/studio)
+- [Flutter](https://docs.flutter.dev/get-started/install)
+- [VS Code](https://code.visualstudio.com/)
+- [Dart](https://dart.dev/)
 ## Installation
 
 1. Clone the repository:
@@ -31,14 +35,20 @@ List the main dependencies used in your project here:
 - provider:
 - syncfusion_flutter_datepicker:
 - http:
-- connectivity:
+- internet_connection_checker:
 
-- ...
+##.env
+Create .env file in the root to the project and add your MarketStock APIKEY like this:
+```bash
+API_KEY=YOUR_API_KEY
+```
 
 ##App Release
 -Open a terminal or command prompt and navigate to your Flutter project's root directory.
 -Run the following commands to build the app for release:
----flutter clean
----flutter build apk --release   // For Android
----flutter build ios --release   // For iOS
+```bash
+1. flutter clean
+2. flutter build apk --release   // For Android
+3. flutter build ios --release   // For iOS
+```
 

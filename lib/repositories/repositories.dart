@@ -2,12 +2,16 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:basalt_stock_market/utils/constants.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
 
 import '../models/eod.dart';
 import '../models/ticker_model.dart';
 
 class StockRepository {
+  String apiKey = dotenv.env['API_KEY']!;
+
+
   Future<List<TickerModel>> getTickers() async {
     Response response =
         await get(Uri.parse('$baseUrl$tickerUrl?access_key=$apiKey'));

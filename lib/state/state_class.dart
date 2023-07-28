@@ -1,5 +1,6 @@
 import 'package:basalt_stock_market/state/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:provider/provider.dart';
 
 
@@ -15,6 +16,12 @@ class StateManagementClass extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) =>BaicUtilProvider()),
+    StreamProvider<InternetConnectionStatus>(
+    initialData: InternetConnectionStatus.connected,
+    create: (_) {
+    return InternetConnectionChecker().onStatusChange;
+    },
+    )
       ],
       child: child,
     );

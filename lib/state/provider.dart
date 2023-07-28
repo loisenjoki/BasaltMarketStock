@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:connectivity/connectivity.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../repositories/repositories.dart';
@@ -15,6 +14,10 @@ class BaicUtilProvider extends ChangeNotifier {
   var _tickers;
   get tickers => _tickers;
   bool _isConnected = true;
+  bool _isSeaching = false;
+  get isSearching => _isSeaching;
+  TextEditingController searchController = TextEditingController();
+
 
   bool get isConnected => _isConnected;
 
@@ -41,6 +44,10 @@ class BaicUtilProvider extends ChangeNotifier {
     }
   }
 
+  toggleSearch(bool value) {
+    _isSeaching = value;
+    notifyListeners();
+  }
 
   void getTickerList() async {
     toggleloading(true);
@@ -54,12 +61,21 @@ class BaicUtilProvider extends ChangeNotifier {
       toggleloading(false);
     }
   }
-  ///check for internet connectivity
 
-  void checkConnectivity() async {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    _isConnected = (connectivityResult != ConnectivityResult.none);
-    notifyListeners();
+  void searchTickerList() async {
+    toggleloading(true);
+    var tickerList = _tickers;
+    _tickers = tickerList
+        .where((element) =>
+    element.symbol
+        .toLowerCase()
+        .contains(searchController.text.toLowerCase()) ||
+        element.name
+            .toLowerCase()
+            .contains(searchController.text.toLowerCase()))
+        .toList();
+    searchController.clear();
+    toggleloading(false);
   }
 
 }

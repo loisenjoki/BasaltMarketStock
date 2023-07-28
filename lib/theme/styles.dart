@@ -3,7 +3,7 @@ import 'colors.dart';
 
 class TextStyles {
   static TextStyle get labelLarge => const TextStyle(
-      fontFamily: 'Lato',
+      fontFamily: 'Quicksand',
       color: black,
       fontSize: 14,
       fontWeight: FontWeight.w600,
@@ -14,12 +14,12 @@ class TextStyles {
       letterSpacing: 2,
       fontWeight: FontWeight.bold,
       color: black);
-  static TextStyle get smalltext => const TextStyle(
+  static TextStyle get smallText => const TextStyle(
       fontFamily: 'Quicksand',
       fontSize: 14,
       letterSpacing: 2,
       color: black);
-  static TextStyle get toolbarText => const TextStyle( fontFamily: 'libreBaskerville',
+  static TextStyle get warningText => const TextStyle( fontFamily: 'libreBaskerville',
       fontSize: 22, fontWeight: FontWeight.w400, color: white);
 
 
